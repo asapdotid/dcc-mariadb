@@ -105,8 +105,8 @@ compose-logs: validate-compose-variables ## Logs docker containers.
 compose-ps: validate-compose-variables ## Docker composer PS containers.
 	@$(DOCKER_COMPOSE) ps $(DOCKER_SERVICE_NAME)
 
-##@[Container: Shell]
+##@ [Container: Shell]
 
-.PHONY: in-shell
-in-shell:  ## Execute shell script in container with ARGS="ls -al" for production TYPE=-master/-slave
+.PHONY: shell
+shell:  ## Execute shell script in container with ARGS="ls -al" for production TYPE=-master/-slave
 	@$(EXECUTE_IN_APPLICATION_CONTAINER) $(DOCKER_SERVICE_DATABASE_NAME)$(TYPE) $(ARGS)
