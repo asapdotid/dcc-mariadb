@@ -1,4 +1,4 @@
-version: "2.1"
+version: "3.7"
 
 networks:
   proxy:
@@ -18,7 +18,7 @@ services:
       - secure
     volumes:
       - ${DATABASE_CONFIG_DIR}/app_custom.cnf:/opt/bitnami/mariadb/conf/app_custom.cnf:ro
-      - ${DATABASE_DATA_DIR}/db_master:/bitnami/mariadb
+      - ${DATABASE_DATA_DIR}/master_db:/bitnami/mariadb
     environment:
       - MARIADB_REPLICATION_MODE=master
       - MARIADB_REPLICATION_USER=${DATABASE_REPLICATION_USER}
