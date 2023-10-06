@@ -45,13 +45,13 @@ Error: `mkdir: cannot create directory '/bitnami/mariadb/data': Permission denie
 Now chown this directory to `1001:1001` since the image is using UID `1001` as the user running the command:
 
 ```bash
-sudo chown -R 1001:1001 [.data/development_db]
+sudo chown -R 1001:1001 .data/development_db
 ```
 
 Or
 
 ```bash
-sudo chown -R 1001:1001 [.data/master_db]
+sudo chown -R 1001:1001 .data/master_db
 ```
 
 ## License
