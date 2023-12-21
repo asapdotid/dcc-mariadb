@@ -8,6 +8,7 @@ networks:
 services:
   mariadb-master:
     image: ${DOCKER_REGISTRY?}/${DOCKER_NAMESPACE?}/${DOCKER_IMAGE?}:${DOCKER_IMAGE_TAG?}
+    restart: unless-stopped
     ports:
       - "${DATABASE_DB_PORT}:3306"
     networks:
