@@ -187,8 +187,10 @@ Temporary Items
 !.gitignore
 !.gitsubmodules
 .env
-.data/master_db/*
 !.data/master_db/.keepfile
-.data/development_db/*
+.data/master_db/data/*
+!.data/master_db/data/.keepfile
 !.data/development_db/.keepfile
+.data/development_db/data/*
+!.data/development_db/data/.keepfile
 !.data/.keepfile
