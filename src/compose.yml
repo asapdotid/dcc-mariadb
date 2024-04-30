@@ -19,7 +19,7 @@ services:
       - proxy
       - secure
     volumes:
-      - ${DATABASE_CONFIG_DIR}/app_custom.cnf:/opt/bitnami/mariadb/conf/app_custom.cnf:ro
+      - ${DATABASE_CONFIG_DIR}/my_custom.cnf:/opt/bitnami/mariadb/conf/my_custom.cnf:ro
       - ${DATABASE_DATA_DIR}/master_db:/bitnami/mariadb
     environment:
       - MARIADB_REPLICATION_MODE=master
